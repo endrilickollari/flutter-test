@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  test_drive:
+    image: flutter_test_drive
+    volumes:
+      - .:/flutter_project
+    working_dir: /flutter_project
+    command: "./run_test_drive.sh"
+    ports:
+      - '8000:8000'
